@@ -1,69 +1,60 @@
-name: CI — Build, Lint & Test
+name: CI
 
 on:
   push:
-    branches: [Richy, main]
+    branches: [main]
   pull_request:
-    branches: [Richy, main]
+    branches: [main]
 
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build-and-test:
-    name: Build, Lint & Test
+  lint-type-check:
+    name: Lint & Type Check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         with:
           node-version: '20'
           cache: 'npm'
-
       - name: Install dependencies
-        run: npm install
-
+        run: npm ci
       - name: Lint
         run: npm run lint --if-present
-
       - name: Type check
-        run: npx tsc --noEmit --skipLibCheck
+        run: npx tsc --noEmit
 
-      - name: Build
-        run: npm run build
-
-      - name: Test
-        run: npm test -- --ci --passWithNoTests
-        env:
-          CI: true
-
-  lighthouse:
-    name: Lighthouse Performance Audit
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    needs: build-and-test
-    if: github.event_name == 'pull_request'
+    needs: lint-type-check
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         with:
           node-version: '20'
           cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+        env:
+          NODE_ENV: production
 
-      - name: Install & Build
-        run: |
-          npm install
-          npm run build
-
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v12
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: lint-type-check
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         with:
-          uploadArtifacts: true
-          temporaryPublicStorage: true
-          runs: 3
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test --if-present

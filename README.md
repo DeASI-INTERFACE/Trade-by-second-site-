@@ -66,8 +66,8 @@ Choose the plan that fits your capital size and objectives. All plans include fu
 
 ## Contact Us
 
-📞 +1 234 544 6340
-𝕏 (Twitter): [@tradybysec](https://twitter.com/tradybysec)
+📞 +1 234 234 0324
+𝕏 (Twitter): [@tradybysec](https://x.com/tradybysec)
 
 Ready to start trading at the speed markets actually move? Reach out today to begin your consultation.
 

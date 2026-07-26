@@ -1,7 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
 import { TIERS, TIER_COMPARISON } from '@/data/content';
-import Link from 'next/link';
 
 const TiersPage: FC = () => (
   <main className="pt-28 pb-24 px-6">

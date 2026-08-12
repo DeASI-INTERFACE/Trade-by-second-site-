@@ -1,0 +1,29 @@
+# Auto-labeler config — maps file paths to PR labels
+blockchain:
+  - changed-files:
+    - any-glob-to-any-file: 'blockchain/**'
+
+ui:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/components/**'
+      - 'src/app/**'
+      - '**/*.css'
+      - '**/*.scss'
+
+config:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '*.config.*'
+      - '.env*'
+      - 'tsconfig*'
+
+ci:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
+
+docs:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.md'
+      - 'docs/**'

@@ -1,0 +1,10 @@
+from backend.engine.enhanced_agi_engine import EnhancedAGIEngine
+
+agi = EnhancedAGIEngine()
+agi.initialize()
+
+result = agi.process_message(
+    user_id="trader_001",
+    message="Analyze BTC risk/reward at current levels",
+    reasoning_mode="multi_perspective"
+)

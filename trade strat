@@ -1,0 +1,6 @@
+git clone https://github.com/De-ASI-INTERFACE/qtip.git
+cd qtip
+git checkout Richy
+python -m venv agi_env
+source agi_env/bin/activate
+pip install -r requirements.txt

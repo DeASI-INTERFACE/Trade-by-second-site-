@@ -1,0 +1,18 @@
+[package]
+name = "guaranteed_returns_trading"
+version = "1.0.0"
+description = "Solana smart contract for executing trades with guaranteed minimum returns"
+edition = "2021"
+
+[dependencies]
+anchor-lang = "0.28"
+anchor-spl = "0.28"
+solana-program = "1.17"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

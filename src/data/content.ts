@@ -53,20 +53,20 @@ export const TIERS = [
 ];
 
 export const TIER_COMPARISON = [
-  { feature: 'Live Signal Access',          pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Second-Resolution Timing',    pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Performance Dashboard',       pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Email Alerts',                pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Community Access',            pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Full Automation Suite',       pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'API Access',                  pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Risk Management Module',      pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Monthly Strategy Reviews',    pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Custom Strategy Config',      pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Full Infrastructure Access',  pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Real-Time P&L Reporting',     pulse: '—', core: '—', prime: '✓' },
-  { feature: 'White-Glove Onboarding',      pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Dedicated Support Line',      pulse: '—', core: '—', prime: '✓' },
+  { feature: 'Live Signal Access',          pulse: true,  core: true,  prime: true },
+  { feature: 'Second-Resolution Timing',    pulse: true,  core: true,  prime: true },
+  { feature: 'Performance Dashboard',       pulse: true,  core: true,  prime: true },
+  { feature: 'Email Alerts',                pulse: true,  core: true,  prime: true },
+  { feature: 'Community Access',            pulse: true,  core: true,  prime: true },
+  { feature: 'Full Automation Suite',       pulse: false, core: true,  prime: true },
+  { feature: 'API Access',                  pulse: false, core: true,  prime: true },
+  { feature: 'Risk Management Module',      pulse: false, core: true,  prime: true },
+  { feature: 'Monthly Strategy Reviews',    pulse: false, core: true,  prime: true },
+  { feature: 'Custom Strategy Config',      pulse: false, core: false, prime: true },
+  { feature: 'Full Infrastructure Access',  pulse: false, core: false, prime: true },
+  { feature: 'Real-Time P&L Reporting',     pulse: false, core: false, prime: true },
+  { feature: 'White-Glove Onboarding',      pulse: false, core: false, prime: true },
+  { feature: 'Dedicated Support Line',      pulse: false, core: false, prime: true },
 ];
 
 export const HOW_IT_WORKS = [

@@ -1,6 +1,6 @@
 export const STATS = [
   { value: '24/7', label: 'Market Monitoring' },
-  { value: '1s',   label: 'Execution Resolution' },
+  { value: '1 second', label: 'Execution Resolution' },
   { value: '3',    label: 'Subscription Tiers' },
   { value: '100%', label: 'Algorithmic Execution' },
 ];

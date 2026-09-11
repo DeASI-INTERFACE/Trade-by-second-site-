@@ -129,7 +129,7 @@ export const DOCS_SECTIONS = [
     icon: '🔌',
     title: 'API Integration',
     badge: 'Available',
-    description: 'Connect your exchange accounts using read/write API keys. Supports Binance, Coinbase Advanced, Kraken, and Solana DEX endpoints. All keys are encrypted at rest using AES-256.',
+    description: 'Connect your exchange accounts using read/write API keys. Supports Binance, Coinbase Advanced, Kraken, and Solana DEX endpoints. API credentials are encrypted at rest using AES-256, encrypted in transit via TLS, and managed under documented key rotation and least-privilege access policies.',
     topics: [
       'Supported exchange connectors',
       'API key permission requirements',

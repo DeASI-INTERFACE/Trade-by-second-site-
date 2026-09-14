@@ -1,6 +1,6 @@
 export const STATS = [
   { value: '24/7', label: 'Market Monitoring' },
-  { value: '1s',   label: 'Execution Resolution' },
+  { value: '1 second', label: 'Execution Resolution' },
   { value: '3',    label: 'Subscription Tiers' },
   { value: '100%', label: 'Algorithmic Execution' },
 ];
@@ -53,20 +53,20 @@ export const TIERS = [
 ];
 
 export const TIER_COMPARISON = [
-  { feature: 'Live Signal Access',          pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Second-Resolution Timing',    pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Performance Dashboard',       pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Email Alerts',                pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Community Access',            pulse: '✓', core: '✓', prime: '✓' },
-  { feature: 'Full Automation Suite',       pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'API Access',                  pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Risk Management Module',      pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Monthly Strategy Reviews',    pulse: '—', core: '✓', prime: '✓' },
-  { feature: 'Custom Strategy Config',      pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Full Infrastructure Access',  pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Real-Time P&L Reporting',     pulse: '—', core: '—', prime: '✓' },
-  { feature: 'White-Glove Onboarding',      pulse: '—', core: '—', prime: '✓' },
-  { feature: 'Dedicated Support Line',      pulse: '—', core: '—', prime: '✓' },
+  { feature: 'Live Signal Access',          pulse: true,  core: true,  prime: true },
+  { feature: 'Second-Resolution Timing',    pulse: true,  core: true,  prime: true },
+  { feature: 'Performance Dashboard',       pulse: true,  core: true,  prime: true },
+  { feature: 'Email Alerts',                pulse: true,  core: true,  prime: true },
+  { feature: 'Community Access',            pulse: true,  core: true,  prime: true },
+  { feature: 'Full Automation Suite',       pulse: false, core: true,  prime: true },
+  { feature: 'API Access',                  pulse: false, core: true,  prime: true },
+  { feature: 'Risk Management Module',      pulse: false, core: true,  prime: true },
+  { feature: 'Monthly Strategy Reviews',    pulse: false, core: true,  prime: true },
+  { feature: 'Custom Strategy Config',      pulse: false, core: false, prime: true },
+  { feature: 'Full Infrastructure Access',  pulse: false, core: false, prime: true },
+  { feature: 'Real-Time P&L Reporting',     pulse: false, core: false, prime: true },
+  { feature: 'White-Glove Onboarding',      pulse: false, core: false, prime: true },
+  { feature: 'Dedicated Support Line',      pulse: false, core: false, prime: true },
 ];
 
 export const HOW_IT_WORKS = [
@@ -129,7 +129,7 @@ export const DOCS_SECTIONS = [
     icon: '🔌',
     title: 'API Integration',
     badge: 'Available',
-    description: 'Connect your exchange accounts using read/write API keys. Supports Binance, Coinbase Advanced, Kraken, and Solana DEX endpoints. All keys are encrypted at rest using AES-256.',
+    description: 'Connect your exchange accounts using read/write API keys. Supports Binance, Coinbase Advanced, Kraken, and Solana DEX endpoints. API credentials are encrypted at rest using AES-256, encrypted in transit via TLS, and managed under documented key rotation and least-privilege access policies.',
     topics: [
       'Supported exchange connectors',
       'API key permission requirements',

@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: var(--font-mono);
+}
+
+/* ─── Glow effects ─── */
+.glow {
+  text-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff44;
+}
+
+.glow-gold {
+  text-shadow: 0 0 16px #f5c518, 0 0 32px #f5c51844;
+}
+
+/* ─── Cards ─── */
+.card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #00e5ff22;
+  border-radius: 12px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: #00e5ff66;
+  box-shadow: 0 0 32px #00e5ff22;
+  transform: translateY(-2px);
+}
+
+.card-gold {
+  border-color: #f5c51844 !important;
+}
+
+.card-gold:hover {
+  border-color: #f5c518aa !important;
+  box-shadow: 0 0 32px #f5c51822 !important;
+}
+
+/* ─── Nav ─── */
+.nav-link {
+  position: relative;
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00e5ff;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #00e5ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Gradient dividers ─── */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00e5ff44, transparent);
+}
+
+/* ─── Fade-in animation ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease both;
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #00e5ff33; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00e5ff66; }
